@@ -1,24 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo-list</title>
-    <link rel="stylesheet" href="scr/style.css">
-</head>
-<body>
-<div class="container">
-    <div class="item">
-        <h1>TODO LIST</h1>
-        <div id="todo-text-area">
-            <input type="text" id="task" placeholder="ADD A NEW TASK HERE...">
-            <button id="btn">ADD</button>
-        </div>
-        <ul id="taskList">
-            <!-- Tasks will be added here -->
-        </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body>
+  
+    <div class="container">
+      <h1>Todo List</h1>
+      <div id="todo-text-area">
+          <input type="text" id="task" placeholder="Enter a new task">
+          <button id="btn">Add</button>
+      </div>
+      <ul id="taskList">
+          <!-- Todo items will be added here dynamically -->
+      </ul>
     </div>
-</div>
-
-</body>
+    
+    <script src="main.js"></script>
+  </body>
 </html>
