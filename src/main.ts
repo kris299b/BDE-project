@@ -1,23 +1,3 @@
-
-// interface TodoList {
-//   container: HTMLDivElement;
-//   heading: HTMLHeadingElement;
-//   todoTextArea: HTMLDivElement;
-//   taskInput: HTMLInputElement;
-//   addButton: HTMLButtonElement;
-//   taskList: HTMLUListElement;
-// }
-
-// const TodoList: TodoList = {
-//   container: document.querySelector(".container") as HTMLDivElement,
-//   heading: document.querySelector("h1") as HTMLHeadingElement,
-//   todoTextArea: document.querySelector("#todo-text-area") as HTMLDivElement,
-//   taskInput: document.querySelector("#task") as HTMLInputElement,
-//   addButton: document.querySelector("#btn") as HTMLButtonElement,
-//   taskList: document.querySelector("#taskList") as HTMLUListElement,
-// };
-
-
 // Definere en Todo-Item Interface
 interface TodoItem {
   id: number;
@@ -43,25 +23,40 @@ interface ToggleTodoAction {
   id: number;
 }
 
-// Dette stykke er en "reducer function" til at håndtere Todo listens tilstand
-function todoReducer(state: TodoList, action: TodoAction): TodoList {
-  switch (action.type) {
-    case 'ADD_TODO':
-      const newItem: TodoItem = {
-        id: state.length + 1,
-        text: action.text,
-        completed: false,
-      };
-      return [...state, newItem];
-    case 'TOGGLE_TODO':
-      return state.map((todo) =>
-        todo.id === action.id
-          ? { ...todo, completed: !todo.completed }
-          : todo
-      );
-    default:
-      return state;
+const addButton = document.querySelector("#btn") as HTMLButtonElement; // click event
+
+// Update the testme function to add new todo items to the list
+function testme() {
+  const taskInput = document.querySelector("#task") as HTMLInputElement;
+  const text = taskInput.value;
+
+  if (text) {
+    // Create the AddTodoAction based on user input
+    const action: AddTodoAction = {
+      type: 'ADD_TODO',
+      text: text,
+    };
+
+    // Dispatch the action (you might not need this depending on your setup)
+    // dispatch(action);
+
+    console.log("test2", action);
+
+    // Reset the input field
+    taskInput.value = "";
+    console.log("todo: " + text);
+
+    // Add the new todo item to the list
+    const todoList = document.querySelector("#taskList") as HTMLUListElement;
+    const newTodoItem = document.createElement("li");
+    newTodoItem.textContent = text;
+    todoList.appendChild(newTodoItem);
   }
 }
 
-export type { TodoItem, TodoList, TodoAction, todoReducer };
+// make an interface/type that makes sure the text is a string
+
+
+addButton.addEventListener("click", testme);
+
+export type { TodoItem, TodoList, TodoAction, testme };
