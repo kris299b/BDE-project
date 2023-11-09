@@ -3,6 +3,7 @@
   background-color: rgb(59, 59, 59);
   margin: 0;
 }
+
 body {
   display: flex;
   justify-content: center;
@@ -27,11 +28,12 @@ ul {
   padding: 0;
 }
 
+
 #task {
   color: white;
   font-size: 20px;
   border:solid 2px #5100ff;
-  height: 30px;
+  height: 35px;
   width: 400px;
   padding-left: 10px;
 }
