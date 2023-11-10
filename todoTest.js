@@ -23,8 +23,6 @@ test("Add task", async t => {
     assert.equal(addTodoActionCount, 1 , 'Expected 1 element with class #taskList');
 });
 
-
-
 fixture`todo list test 2`
     .page("./index.html");
 
