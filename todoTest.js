@@ -9,7 +9,6 @@ test('Add new task to todo list', async (t) => {
     const taskList = Selector('#taskList');
     await t.expect(taskList.child().count).eql(0, 'Initial todo list should be empty');
 
-    
     // Arrange
     const taskInput = Selector('#task');
     const addButton = Selector('#btn');
