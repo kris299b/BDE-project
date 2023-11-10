@@ -45,5 +45,3 @@ test("Add another task and delete the old", async t => {
     const addTodoActionCount = await Selector("#taskList").count;
     assert.equal(addTodoActionCount, 1, 'Expected 1 element with class #taskList');
 });
-
-
