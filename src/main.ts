@@ -64,7 +64,7 @@ function testme() {
     // Apply styles directly using the style property
     deleteButton.style.backgroundColor = "#f1f1f1"; // Set the background color
     deleteButton.style.color = "#black"; // Set the text color
-    deleteButton.style.padding = "5px 10px"; // Add some padding for better appearance
+    deleteButton.style.padding = "5px 15px"; // Add some padding for better appearance
     deleteButton.style.cursor = "pointer"; // Change cursor to pointer on hover for better user experience
 
 
