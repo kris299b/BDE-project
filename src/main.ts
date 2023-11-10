@@ -59,7 +59,7 @@ function testme() {
     deleteButton.style.color = "#black"; 
     deleteButton.style.padding = "5px 15px"; 
     deleteButton.style.cursor = "pointer"; 
-    
+
 
     // Tilføjer delete-kanppen til todo'en.
     newTodoItem.appendChild(deleteButton);
