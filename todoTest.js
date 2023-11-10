@@ -12,17 +12,16 @@ test("Add task", async t => {
     await t
     //Arrange
         .typeText(Selector("#task"), "Call mom")
-   
+
+
     await t
     //Act
         .click("#btn")
-
 
     //Assert (That there is 1 element with the class #taskList)
     const addTodoActionCount = await Selector('#taskList').count;
     assert.equal(addTodoActionCount, 1 , 'Expected 1 element with class #taskList');
 });
-
 
 
 
@@ -38,7 +37,6 @@ test("Add another task and delete the old", async t => {
     .typeText(Selector("#task"), "Write in journal")
     .click("#btn");
 
-
     // Act
     const deleteButton = Selector("#taskList li button");
     await t.click("button");
@@ -47,3 +45,5 @@ test("Add another task and delete the old", async t => {
     const addTodoActionCount = await Selector("#taskList").count;
     assert.equal(addTodoActionCount, 1, 'Expected 1 element with class #taskList');
 });
+
+
